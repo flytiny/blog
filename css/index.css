@@ -6,6 +6,18 @@
 	padding:0;
 	width:100%;
 }
+.menu-show-div{
+height:50px;
+}
+.menu-show{
+	height: 50px;
+
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+ color: #777;
+ text-align: center;
+}
 .left-menu{
 	position:fixed;
 }
