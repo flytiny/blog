@@ -12,11 +12,10 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/css" rel="stylesheet" type="text/css">
   <link href="css/style.min.css" rel="stylesheet">
-
+  <link href="css/index.css" rel="stylesheet">
 
   <script src="js/pace.js"></script>
-  <link href="css/pace-theme-flash.min.css" rel="stylesheet">
-</head>
+  <link href="css/pace-theme-flash.min.css" rel="stylesheet"></head>
 
 <body class=" pace-done">
   <div class="pace  pace-inactive">
@@ -33,24 +32,37 @@
   <div class="overlay" id="overlay">
     <nav class="overlay-menu">
       <ul>
-        <li>
+        <li class="menu-li">
           <a href="#">title1</a>
         </li>
-        <li>
+        <li class="menu-li">
           <a href="#">title1</a>
         </li>
-        <li>
+        <li class="menu-li">
           <a href="#">title1</a>
         </li>
-        <li>
+        <li class="menu-li">
           <a href="#">title1</a>
         </li>
-        <li>
+        <li class="menu-li">
+          <a href="#">title1</a>
+        </li>
+        <li class="menu-li">
           <a href="#">title1</a>
         </li>
       </ul>
     </nav>
   </div>
+
+  <!-- header里面属性： container-fluid  流布局    uppercase：全部大写
+      第一个div xs和md和sm 确认在大小屏幕的宽度  offset设置偏移-->
+  <header class="container-fluid  uppercase ">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+    <div class="blog-title-div">
+      <h1 id="title" class=" blog-title">论前端是多么的难写</h1>
+      </div>
+    </div>
+  </header>
 
   <!-- Javascript -->
   <script src="js/jquery.js"></script>
