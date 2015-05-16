@@ -7,4 +7,11 @@ $("#toggle").click(
 		$("#overlay").toggleClass("open"),
 		$(".main-content").toggleClass("active")
 	}
-	);
+	),
+
+$(".main-content").click(function(){
+	if($(".main-content").attr("class").split(" ").length==2){
+			$("#toggle").trigger("click");
+	};
+});
+
