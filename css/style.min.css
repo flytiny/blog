@@ -163,14 +163,14 @@ a {
 .overlay.open {
     opacity: 1;
     visibility: visible;
-    width: 15%;
+    width: 300px;
     overflow: hidden
 }
 
 .overlay nav {
     position: relative;
     height: 100%;
-    font-size: 32px;
+    font-size: 16px;
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     text-align: center
@@ -190,7 +190,9 @@ a {
     display: block;
     min-height: 32px;
     position: relative;
-    opacity: 0
+    opacity: 0;
+    width:250px;
+    margin-bottom: 10px;
 }
 
 .overlay.open nav ul li {
@@ -246,8 +248,9 @@ a {
     display: block;
     position: relative;
     color: #FFF;
-    overflow: hidden
-}
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 
 .overlay nav ul li a:hover {
     text-decoration: none
@@ -272,6 +275,17 @@ a {
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     transform: translateX(0%)
+}
+.overlay nav ul li a span{
+    font-size: 8px;
+}
+
+.main-content{
+    margin:0;
+    background-color: #ffffff;
+}
+.main-content.active{
+    margin:300px;
 }
 
 

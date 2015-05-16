@@ -1,6 +1,4 @@
-.menu-li{
-	height:30px;
-}
+
 .blog-title-div{
 margin: auto;
 width: auto;
@@ -8,4 +6,12 @@ text-align: center;
 }
 .blog-title{
 	margin-top:50px;
+}
+.main-content{
+    margin-left:0;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+}
+.main-content.active {
+  margin-left: 300px;
 }
