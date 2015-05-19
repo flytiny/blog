@@ -48,6 +48,12 @@ a.node:hover {
 header{
 	margin-bottom: 40px;
 }
+.content-div{
+	display: inline-block;
+}
+.blog-info-div{
+	margin-top: 40px;
+}
 .footer {
   bottom: 0;
   width: 100%;
@@ -58,4 +64,20 @@ header{
   		text-align: center;
   	}
   }
+}
+
+.right-menu{
+	position: fixed;
+}
+.right-menu nav ul li a{
+	display: block;
+  padding: 4px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #767676;
+
+}
+.right-menu nav ul li a.active{
+	  background-color: #eee;
+
 }

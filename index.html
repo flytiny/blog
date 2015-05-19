@@ -14,8 +14,8 @@
 	<link href="css/style.min.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/github-markdown.min.css">
-	<link rel="stylesheet" href="css/default.min.css">
+<!-- 	<link rel="stylesheet" href="css/github-markdown.min.css">
+	<link rel="stylesheet" href="css/default.min.css"> -->
 
 	<script src="js/pace.js"></script>
 	<link href="css/pace-theme-flash.min.css" rel="stylesheet"></head>
@@ -67,7 +67,7 @@
 		<!-- header里面属性： container-fluid  流布局    uppercase：全部大写
       第一个div xs和md和sm 确认在大小屏幕的宽度  offset设置偏移-->
 		<header class="container-fluid  uppercase ">
-			<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2">
 				<div class="blog-title-div">
 					<h1 id="" class=" blog-title">论前端是多么的难写</h1>
 				</div>
@@ -77,16 +77,14 @@
 						<a class="node" href="#">JAVA</a>
 					</div>
 				</div>
-				<div class="blog-info-div">
-					<h3 class="blog-time col-md-offset-7">创建时间:2015-05-15 &nbsp;&nbsp;&nbsp;最后一次修改时间:2015-05-16</h3>
-				</div>
+				
 			</div>
 		</header>
 
-		<div class="container-fluid">
+		<div class="container-fluid content-div">
 
-			<article class="content col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
-				<h3>Syntax</h3>
+			<article class="content col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2 scrollspy-example"  data-spy="scroll" data-target="#right-menu-nav" data-offset="0" >
+				<h1 >Syntax</h1>
 				<h4>Strong and Emphasize</h4>
 				<p> <strong>strong</strong>
 					or <strong>strong</strong>
@@ -124,17 +122,17 @@
 					link. Input id, then anywhere in the doc, define the link with corresponding id:
 				</p>
 				<p>Titles ( or called tool tips ) in the links are optional.</p>
-				<h4>Images</h4>
+				<h1 >Images</h1>
 				<p>
 					An inline image, title is optional
-					<img src="https://avatars2.githubusercontent.com/u/5719209?v=3&amp;s=460" alt="Smaller icon" title="Title here">.</p>
+					.</p>
 				<p>
 					A reference style image
-					<img src="https://avatars2.githubusercontent.com/u/5719209?v=3&amp;s=460" alt="Resize icon" title="Title here">.</p>
+					.</p>
 				<p>
 					Control image style by youself.
 					<a href="http://github.com/superhx" title="">
-						<img src="https://avatars2.githubusercontent.com/u/5719209?v=3&s=460" width="100"></a>
+						</a>
 				</p>
 				<h4>Inline code and Block code</h4>
 				<p>
@@ -144,7 +142,7 @@
 				</p>
 				<pre><code class="">  Indent each line by at least 1 tab, 2 spaces or 4 spaces.
   						var Mou = exactlyTheAppIwant</code></pre>
-				<h4>Ordered Lists</h4>
+				<h1>Ordered Lists</h1>
 				<p>Ordered lists are created using &#34;1.&#34; + Space:</p>
 				<ol>
 					<li>
@@ -160,7 +158,7 @@
 						<ol></ol>
 					</li>
 				</ol>
-				<h4>Unordered Lists</h4>
+				<h4 >Unordered Lists</h4>
 				<p>Unordered list are created using &#34;*&#34; + Space:</p>
 				<ul>
 					<li>
@@ -191,14 +189,14 @@
 						<ol></ol>
 					</li>
 				</ul>
-				<h4>Hard Linebreak</h4>
+				<h1>Hard Linebreak</h1>
 				<p>
 					End a line with two or more spaces will create a hard linebreak, called
 					<code>&lt;br /&gt;</code>
 					in HTML.
 				</p>
 				<p>Above line ended with 2 spaces.</p>
-				<h4>Horizontal Rules</h4>
+				<h4 >Horizontal Rules</h4>
 				<p>Three or more asterisks or dashes:</p>
 				<hr>
 				<hr>
@@ -226,7 +224,7 @@
 				<pre><code class="">Fenced code blocks are like Stardard Markdown&#39;s regular code
 blocks, except that they&#39;re not indented and instead rely on
 a start and end fence lines to delimit the code block.</code></pre>
-				<h4>Tables</h4>
+				<h4 >Tables</h4>
 				<p>A simple table looks like this:</p>
 				<table>
 					<thead>
@@ -298,18 +296,31 @@ a start and end fence lines to delimit the code block.</code></pre>
 					</tbody>
 				</table>
 			</article>
+
+			<div class="col-md-2 col-md-offset-9 right-menu " id="right-menu">
+				<nav class=" hidden-print hidden-xs hidden-sm affix right-menu-nav" role="navigation" id="right-menu-nav">
+				<div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+					<ul class="nav bs-docs-sidenav right-menu-ul">
+					</ul>
+				</div>
+				</nav>
+			</div>
 		</div>
+		<div class="blog-info-div">
+					<h3 class="blog-time col-md-offset-7  col-xs-offset-4 col-sm-offset-2">创建时间:2015-05-15</h3>
+					<h3 class="blog-time col-md-offset-7  col-xs-offset-4 col-sm-offset-2">最后一次修改时间:2015-05-16</h3>
+				</div>
 	</div>
-	<footer class="footer">
+	<footer class="footer" id="footer">
       <div class="container">
-        <p class="">韩旭的爹爹开发</p>
+        <p class="">韩旭的爹爹----陈俊杉开发</p>
       </div>
     </footer>
 
 	<!-- Javascript -->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/noframework.waypoints.min.js"></script>
 	<script src="js/index.js"></script>
-
 </body>
 </html>
