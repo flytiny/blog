@@ -21,7 +21,7 @@ $(".main-content").click(function(){
 			var tag = "tag" + i;
 			$(".content h1,.content h2").eq(i).addClass(tag);
 			$(".content h1,.content h2").eq(i).attr('id',tag);
-			var temp = '<li ><a class="a '+i+'" href="#tag'+i+'">概览</a></li>';
+			var temp = '<li ><a class="a '+i+'" href="#tag'+i+'">'+$(".content h1,.content h2").eq(i).html()+'</a></li>';
 			$(".right-menu-ul").append(temp);
 		}
 
@@ -48,6 +48,32 @@ $(".main-content").click(function(){
 //     $(".right-menu-ul li a").eq(4).toggleClass("active");
 //   }
 // });
+// 
+var test = $('.content').find('h1,h2');
+for (var i = 0; i < test.length; i++) {
+	(function (e) {
+  new Waypoint({
+    element: test[i],
+    handler: function(i) {
+    	// test.filter(".active").removeClass("active");
+    	// test[i].addClass("active");
+    	
+    	console.log(this.element.innerHTML());
+    },
+    continuous: false
+  })
+
+	})(i)
+//   new Waypoint({
+//     element: test[i],
+//     handler: function(i) {
+//     	// test.filter(".active").removeClass("active");
+//     	// test[i].addClass("active");
+    	
+//     	console.log(this.element.css("color","red"));
+//     }
+//   })
+};
 
 
 
