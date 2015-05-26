@@ -285,7 +285,14 @@ a {
     margin:300px;
 }
 
-
+@media screen and (max-width: 600px) {
+    .overlay.open {
+    width: 100%;
+}
+.main-content.active {
+  margin-left: 0;
+}
+}
 
 
 

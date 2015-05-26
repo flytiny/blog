@@ -48,7 +48,8 @@ header {
   margin-bottom: 40px; }
 
 .content-div {
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
 
 .blog-info-div {
   margin-top: 40px; }
