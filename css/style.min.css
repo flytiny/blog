@@ -251,7 +251,7 @@ a {
     overflow: hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
-
+}
 .overlay nav ul li a:hover {
     text-decoration: none
 }
@@ -264,7 +264,7 @@ a {
     -webkit-transform: translateX(-105%);
     -ms-transform: translateX(-105%);
     transform: translateX(-105%);
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: #FFF;
     -webkit-transition: .35s ease;
@@ -281,19 +281,36 @@ a {
 }
 
 
-.main-content.active{
-    margin:300px;
-}
 
 @media screen and (max-width: 600px) {
     .overlay.open {
     width: 100%;
-}
-.main-content.active {
-  margin-left: 0;
-}
-}
 
+    }
+    .overlay nav ul li {
+  width: 80%;
+  margin-left: 20px;
+    }
+    .overlay.open .main-content{
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 992px){
+    .overlay.open {
+    width: 200px;
+
+    }
+    .overlay nav ul li {
+  width: 80%;
+  margin-left: 20px;
+    }
+    .overlay.open .main-content{
+        display: none;
+    }
+    .overlay nav ul {
+  width: 100%;
+}
+}
 
 
 
