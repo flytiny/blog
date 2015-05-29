@@ -23,7 +23,7 @@ margin-bottom: 50px;
     margin-bottom: 40px;
 }
 .main-content.active {
-  margin-left: 10%;
+  margin-left: 20%;
 }
 a.node:link, a.node:visited, a.node:active {
   background-color: #f5f5f5;
@@ -69,6 +69,9 @@ header{
 .right-menu{
 	position: fixed;
 }
+.right-menu.active{
+  display: none;
+}
 .right-menu nav ul li a{
 	display: block;
   padding: 4px 20px;
@@ -77,7 +80,20 @@ header{
   color: #767676;
 
 }
+.right-menu nav ul li ul{
+  padding: 4px 20px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #767676;
+  display: none;
+}
 .right-menu nav ul li a.active{
-	  background-color: #eee;
+    background-color: #eee;
+}
 
+.right-menu nav ul li ul.active{
+    display: block;
+}
+.right-menu nav ul li ul li.active{
+    background-color: #eee;
 }

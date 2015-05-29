@@ -163,7 +163,7 @@ a {
 .overlay.open {
     opacity: 1;
     visibility: visible;
-    width: 300px;
+    width: 30%;
     overflow: hidden
 }
 
@@ -184,6 +184,7 @@ a {
     position: relative;
     height: 100%;
     margin-top:80px;
+    width:100%;
 }
 
 .overlay nav ul li {
@@ -191,7 +192,8 @@ a {
     min-height: 32px;
     position: relative;
     opacity: 0;
-    width:250px;
+    width:80%;
+    margin-left: 10%;
     margin-bottom: 10px;
 }
 
@@ -282,7 +284,7 @@ a {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
     .overlay.open {
     width: 100%;
 
@@ -295,22 +297,7 @@ a {
         display: none;
     }
 }
-@media screen and (max-width: 1200px) and (min-width: 992px){
-    .overlay.open {
-    width: 200px;
 
-    }
-    .overlay nav ul li {
-  width: 80%;
-  margin-left: 20px;
-    }
-    .overlay.open .main-content{
-        display: none;
-    }
-    .overlay nav ul {
-  width: 100%;
-}
-}
 
 
 

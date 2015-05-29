@@ -1,42 +1,57 @@
 $("#toggle").click(
-	function(event){
-		event.preventDefault(),
-		$(this).find(".top").toggleClass("active"),
-		$(this).find(".middle").toggleClass("active"),
-		$(this).find(".bottom").toggleClass("active"),
-		$("#overlay").toggleClass("open"),
-		$(".main-content").toggleClass("active")
-	}
+		function(event) {
+			event.preventDefault(),
+				$(this).find(".top").toggleClass("active"),
+				$(this).find(".middle").toggleClass("active"),
+				$(this).find(".bottom").toggleClass("active"),
+				$("#overlay").toggleClass("open"),
+				$(".main-content").toggleClass("active"),
+				$(".right-menu").toggleClass("active")
+		}
 	),
 
-$(".main-content").click(function(){
-	if($(".main-content").attr("class").split(" ").length==2){
+	$(".main-content").click(function() {
+		if ($(".main-content").attr("class").split(" ").length == 2) {
 			$("#toggle").trigger("click");
-	};
-});
-	(function(){
-		var a = $('.content').find('h1,h2').length;
-		for(var i = 0;i < a;i++){
+		};
+	});
+(function() {
+		var getEle = $('.content').find('h1,h2');
+		var a = getEle.length;
+		for (var i = 0; i < a;) {
 			var tag = "tag" + i;
-			$(".content h1,.content h2").eq(i).addClass(tag);
-			$(".content h1,.content h2").eq(i).attr('id',tag);
-			var temp = '<li ><a class="a'+i+'" href="#tag'+i+'">'+$(".content h1,.content h2").eq(i).html()+'</a></li>';
-			$(".right-menu-ul").append(temp);
-		}
-		console.log(a);
-	})();
-  $('.content').find('h1,h2').each(function() {
-    new Waypoint({
-      element: this,
-      handler: function(direction) {
-        var num = '.a'+$(this.element).attr("class").charAt(3);
-        $('.right-menu-ul').find('a').filter(".active").each(function(){
-        	$(this).removeClass("active");
-        })
-        $(num).addClass("active");
-      },
-      continuous: false
-    })  
-  })
+			getEle.eq(i).addClass(tag);
+			getEle.eq(i).attr('id', tag);
+			var temp = '<li ><a class="a' + i + '" href="#tag' + i + '">' + getEle.eq(i).html() + '</a>   <ul class="nav">';
+			i = i + 1;
+			while ((i < a) && (getEle.eq(i).is('h2'))){
+				var tag = "tag" + i;
+					getEle.eq(i).addClass(tag);
+					getEle.eq(i).attr('id', tag);
+					temp += '<li> <a class = "a'+i+' sub" href = "#tag'+i+'" > '+getEle.eq(i).html()+' </a> </li>';
+					i++;
+				}
+				temp += '</ul></li>'; $(".right-menu-ul").append(temp);
+			}
 
 
+		})(); 
+
+
+		$('.content').find('h1,h2').each(function() {
+		new Waypoint({
+			element: this,
+			handler: function(direction) {
+				var num = '.a' + $(this.element).attr("class").charAt(3);
+				$('.right-menu-ul a').removeClass('active');
+				$('.right-menu-ul ul').removeClass('active');
+				$('.right-menu-ul li ul li').removeClass('active');
+				if($(num).hasClass("sub")){
+					$(num).parent().parent().addClass("active");
+				}
+				$(num).addClass("active");
+				$(num).siblings("ul").addClass("active");
+			},
+			continuous: false
+		})
+	})
