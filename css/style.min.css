@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: Montserrat, Helvetica, sans-serif;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
     font-size: 15px
 }
 
@@ -25,7 +25,7 @@ h4 {
 }
 
 p {
-    font-family: "Varela Round", sans-serif;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
     line-height: 2em
 }
 
@@ -163,7 +163,7 @@ a {
 .overlay.open {
     opacity: 1;
     visibility: visible;
-    width: 30%;
+    width: 35%;
     overflow: hidden
 }
 
@@ -171,9 +171,9 @@ a {
     position: relative;
     height: 100%;
     font-size: 16px;
-    font-family: Montserrat, sans-serif;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
     font-weight: 400;
-    text-align: center
+    text-align: left
 }
 
 .overlay nav ul {
@@ -201,29 +201,19 @@ a {
     -webkit-animation: menuFade .5s ease forwards;
     animation: menuFade .5s ease forwards;
     -webkit-animation-delay: .35s;
-    animation-delay: .35s
+    animation-delay: 0s
 }
 
-.overlay.open nav ul li:nth-of-type(2) {
-    -webkit-animation-delay: .4s;
-    animation-delay: .4s
+.overlay nav ul li a{
+    font-size: 18px;
+    height: auto;
+
 }
 
-.overlay.open nav ul li:nth-of-type(3) {
-    -webkit-animation-delay: .45s;
-    animation-delay: .45s
+.overlay nav ul li span{
+    font-size: 14px;
+    color: white;
 }
-
-.overlay.open nav ul li:nth-of-type(4) {
-    -webkit-animation-delay: .5s;
-    animation-delay: .5s
-}
-
-.overlay.open nav ul li:nth-of-type(5) {
-    -webkit-animation-delay: .55s;
-    animation-delay: .55s
-}
-
 @-webkit-keyframes menuFade {
     0% {
         opacity: 0;
@@ -253,8 +243,6 @@ a {
     overflow: hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
-}
-.overlay nav ul li a:hover {
     text-decoration: none
 }
 
@@ -297,7 +285,4 @@ a {
         display: none;
     }
 }
-
-
-
 
