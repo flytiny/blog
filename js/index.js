@@ -4,8 +4,8 @@ $("#toggle").click(
 				$(this).find(".top").toggleClass("active"),
 				$(this).find(".middle").toggleClass("active"),
 				$(this).find(".bottom").toggleClass("active"),
-				$("#overlay").toggleClass("open"),
 				$(".main-content").toggleClass("active"),
+				$("#overlay").toggleClass("open"),
 				$(".right-menu").toggleClass("active")
 		}
 	),
@@ -34,7 +34,8 @@ $("#toggle").click(
 		temp += '</ul></li>';
 		$(".right-menu-ul").append(temp);
 	}
-	$('.content').find('h1,h2').each(function() {
+
+	$('.content').find('h1,h2,article').each(function() {
 		new Waypoint({
 			element: this,
 			handler: function(direction) {
@@ -70,9 +71,18 @@ function dealData(text) {
 		}
 	}
 }
-
 var scroll = function(event,scroller){
     var k = event.wheelDelta? event.wheelDelta:-event.detail*10;
     scroller.scrollTop = scroller.scrollTop - k;
     return false;
 };
+$('.ul-div').perfectScrollbar();
+$('.node').on('click',searchNode);
+function searchNode(e){
+	if ($(".main-content").attr("class").split(" ").length == 1) {
+			$("#toggle").trigger("click");
+		};
+		e.stopPropagation(); 
+	$('.search').val($(e.target).html());
+	dealData($(e.target).html());
+}

@@ -94,7 +94,7 @@ a {
 .button-container {
     position: fixed;
     top: 3%;
-    left: 5%;
+    left: 3.5%;
     height: 21px;
     width: 29px;
     cursor: pointer;
@@ -159,29 +159,11 @@ a {
     -webkit-transition: opacity .35s, visibility .35s,  ease-in-out;
     transition: opacity .35s, visibility .35s,  ease-in-out;
     overflow: hidden;
-    z-index: 100
+    z-index: 100;
+
 }
 
-/* 设置滚动条的样式 */
- #overlay ::-webkit-scrollbar {
-    width: 12px;
-}
 
-/* 滚动槽 */
- #overlay ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-}
- 
-/* 滚动条滑块 */
- #overlay ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(0,0,0,0.1); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
- #overlay ::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(255,0,0,0.4); 
-}
 
 .overlay.open {
     opacity: 1;
@@ -200,6 +182,8 @@ a {
     margin-top: 80px;
     overflow: auto;
     height:80%;
+    position: fixed;
+    width: 35%
 }
 .overlay nav ul {
     list-style: none;
@@ -300,7 +284,9 @@ width:60%;
 }
 .footer{
     text-align: center;
-    padding-top: 30px;
+    top: 94%;
+    position: fixed;
+    left:10%;
 }
 
 
@@ -325,6 +311,9 @@ width:60%;
 .main-content.active{
     display: none;
 }
-
+.ul-div{
+    width: 100%;
+    margin-top: 80px;
+}
 }
 
