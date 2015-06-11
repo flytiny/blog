@@ -58,7 +58,7 @@ $("#toggle").click(
 var totalList = $(".menu-li");
 var input = $('.search');
 input.bind('keyup', sendKeyWord);
-function sendKeyWord() {
+function sendKeyWord(e) {
 	dealData($.trim(input.val()));
 }
 function dealData(text) {
@@ -70,3 +70,9 @@ function dealData(text) {
 		}
 	}
 }
+
+var scroll = function(event,scroller){
+    var k = event.wheelDelta? event.wheelDelta:-event.detail*10;
+    scroller.scrollTop = scroller.scrollTop - k;
+    return false;
+};

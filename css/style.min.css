@@ -158,28 +158,28 @@ a {
     visibility: hidden;
     -webkit-transition: opacity .35s, visibility .35s,  ease-in-out;
     transition: opacity .35s, visibility .35s,  ease-in-out;
-    overflow: auto;
+    overflow: hidden;
     z-index: 100
 }
 
 /* 设置滚动条的样式 */
- ::-webkit-scrollbar {
+ #overlay ::-webkit-scrollbar {
     width: 12px;
 }
 
 /* 滚动槽 */
- ::-webkit-scrollbar-track {
+ #overlay ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 10px;
 }
  
 /* 滚动条滑块 */
- ::-webkit-scrollbar-thumb {
+ #overlay ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgba(0,0,0,0.1); 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
- ::-webkit-scrollbar-thumb:window-inactive {
+ #overlay ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(255,0,0,0.4); 
 }
 
@@ -196,14 +196,17 @@ a {
     font-weight: 400;
     text-align: left
 }
-
+.ul-div{
+    margin-top: 80px;
+    overflow: auto;
+    height:80%;
+}
 .overlay nav ul {
     list-style: none;
     padding: 0;
     margin: 0 auto;
     display: inline-block;
     position: relative;
-    margin-top:80px;
     width:100%;
 }
 
@@ -295,6 +298,10 @@ width:60%;
 .overlay nav ul li a span{
     font-size: 8px;
 }
+.footer{
+    text-align: center;
+    padding-top: 30px;
+}
 
 
 
@@ -315,5 +322,9 @@ width:60%;
     margin-left: 20px;
 
 }
+.main-content.active{
+    display: none;
+}
+
 }
 
