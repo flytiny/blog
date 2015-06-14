@@ -70,6 +70,7 @@ function dealData(text) {
 			totalList.eq(i).show();
 		}
 	}
+	$('.ul-div').scrollTop(0);
 }
 var scroll = function(event,scroller){
     var k = event.wheelDelta? event.wheelDelta:-event.detail*10;
