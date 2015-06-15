@@ -201,6 +201,8 @@ top: 0;
 left: 0;
 height:100px;
 z-index: 50;
+background-color: #FF5252;
+opacity: 0.8;
 }
 .search {
 	width:80%;
@@ -215,10 +217,12 @@ z-index: 50;
     width:80%;
     padding: 10px 0;
         margin-left: 10%;
-/*    margin-bottom: 10px;*/
     border-bottom: solid 1px #000000 ;
 }
-
+.overlay nav ul li:last-child
+{ 
+border-bottom: none;
+}
 .overlay.open nav ul li {
     -webkit-animation: menuFade .5s ease forwards;
     animation: menuFade .5s ease forwards;
@@ -235,6 +239,9 @@ z-index: 50;
 .overlay nav ul li span{
     font-size: 14px;
     color: white;
+}
+.overlay nav ul li span:last-child{
+	margin-left: 10px;
 }
 @-webkit-keyframes menuFade {
     0% {
