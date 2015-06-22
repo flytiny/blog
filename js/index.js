@@ -139,6 +139,9 @@ var rightTop = parseInt($('.right-menu').offset().top);
         $('.right-menu').addClass('fixed');
     }else{
         $('.right-menu').removeClass('fixed');
+        $('.right-menu-ul a').removeClass('active');
+                $('.right-menu-ul ul').removeClass('active');
+                $('.right-menu-ul li ul li').removeClass('active');
     }
  });
 $("#toggle").click(
