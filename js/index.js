@@ -22,6 +22,26 @@ var jsonData = [{
     "tags": ["java", "golang"],
     "title": "Markdown help"
 }, {
+    "date": "2012-01-07T00:00:00Z",
+    "link": "2012/1/7/markdown_help_6/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+}, {
+    "date": "2012-01-07T00:00:00Z",
+    "link": "2012/1/7/markdown_help_6/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+}, {
+    "date": "2012-01-07T00:00:00Z",
+    "link": "2012/1/7/markdown_help_6/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+}, {
+    "date": "2012-01-07T00:00:00Z",
+    "link": "2012/1/7/markdown_help_6/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+}, {
     "date": "2012-01-06T00:00:00Z",
     "link": "2012/1/6/markdown_help_5/index.html",
     "tags": ["java", "golang"],
@@ -64,16 +84,34 @@ var jsonData = [{
     });
 })(jsonData);
 
-
+// var toggleBlog = function(){
+//     var localhref = window.location.href;
+//     var blogList = $(".menu-li");
+//     var blogTop , num;
+//     for (var i = 0; i < blogList.length; i++) {
+//         if (totalList.eq(i).text().toLowerCase().indexOf(localhref.toLowerCase()) >= 0) {
+//             blogTop = totalList.eq(i).offsetTop();
+//             num = i;
+//             break;
+//         } 
+//     }
+//     return {
+//         getTop : function(){return blogTop;},
+//         getNum : function(){return num;}
+//     };
+// }
 $("#toggle").click(
         function(event) {
-            event.preventDefault(),
-                $(this).find(".top").toggleClass("active"),
-                $(this).find(".middle").toggleClass("active"),
-                $(this).find(".bottom").toggleClass("active"),
-                $(".main-content").toggleClass("active"),
-                $("#overlay").toggleClass("open"),
-                $(".right-menu").toggleClass("active")
+            event.preventDefault();
+            // if($('.search').val() == ''){
+            //     $('.ul-div').scrollTop(toggleBlog().getTop());
+            // }
+                $(this).find(".top").toggleClass("active");
+                $(this).find(".middle").toggleClass("active");
+                $(this).find(".bottom").toggleClass("active");
+                $(".main-content").toggleClass("active");
+                $("#overlay").toggleClass("open");
+                $(".right-menu").toggleClass("active");
         }
     ),
 

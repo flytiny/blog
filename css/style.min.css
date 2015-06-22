@@ -179,7 +179,7 @@ a {
     text-align: left
 }
 .ul-div{
-	padding-top: 100px;
+	padding-top: 50px;
     overflow: auto;
     height:93%;
     position: fixed;
@@ -196,18 +196,21 @@ a {
 .search-div{
 position: fixed;
 opacity: 0.8;
-width: 35%;
+width: 31.5%;
 top: 0;
-left: 0;
-height:100px;
+padding-left: 50px;
+padding-right: 30px;
+left: 3.5%;
+height:50px;
 z-index: 50;
 background-color: #FF5252;
 opacity: 0.8;
 }
 .search {
-	width:80%;
-    margin-left: 10%;
-    margin-top: 50px;
+	width:250px;
+    margin-top: 10px;
+    padding: 1px 12px;
+    height:28px;
 }
 .overlay nav ul li {
     display: block;
@@ -302,7 +305,8 @@ border-bottom: none;
     text-align: center;
     top: 94%;
     position: fixed;
-    left:10%;
+    width: 35%;
+    font-size: 150%;
 }
 
 
@@ -329,6 +333,12 @@ border-bottom: none;
 }
 .ul-div{
     width: 100%;
+}
+.footer{
+    width:100%;
+}
+.search{
+	width: inherit;
 }
 }
 
