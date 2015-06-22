@@ -12,6 +12,36 @@ var jsonData = [{
     "tags": ["java", "golang"],
     "title": "Markdown help"
 }, {
+    "date": "2012-01-09T00:00:00Z",
+    "link": "2012/1/9/markdown_help_8/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+},{
+    "date": "2012-01-09T00:00:00Z",
+    "link": "2012/1/9/markdown_help_8/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+},{
+    "date": "2012-01-09T00:00:00Z",
+    "link": "2012/1/9/markdown_help_8/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+},{
+    "date": "2012-01-09T00:00:00Z",
+    "link": "2012/1/9/markdown_help_8/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+},{
+    "date": "2012-01-09T00:00:00Z",
+    "link": "2012/1/9/markdown_help_8/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+},{
+    "date": "2012-01-09T00:00:00Z",
+    "link": "2012/1/9/markdown_help_8/index.html",
+    "tags": ["java", "golang"],
+    "title": "Markdown help"
+},{
     "date": "2012-01-08T00:00:00Z",
     "link": "2012/1/8/markdown_help_7/index.html",
     "tags": ["java", "golang"],
@@ -79,33 +109,45 @@ var jsonData = [{
     	for (var i = val.tags.length - 1; i >= 0; i--) {
     		tag += '<a class="node" href="#">'+val.tags[i]+'</a>'
     	};
-    	var string = '<li class="menu-li"><a href="'+val.link+'">'+val.title+'</a><span>'+tag+'</span><span>'+date.getFullYear()+'-'+date.getMonth()+'-'+date.getDay()+'</span></li>';
+    	var string = '<li class="menu-li"><a href="'+val.link+'">'+val.title+'</a><span>'+tag+'</span><span>'+date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDay()+'</span></li>';
     	$('.ul-div ul').append(string);
     });
 })(jsonData);
 
-// var toggleBlog = function(){
-//     var localhref = window.location.href;
-//     var blogList = $(".menu-li");
-//     var blogTop , num;
-//     for (var i = 0; i < blogList.length; i++) {
-//         if (totalList.eq(i).text().toLowerCase().indexOf(localhref.toLowerCase()) >= 0) {
-//             blogTop = totalList.eq(i).offsetTop();
-//             num = i;
-//             break;
-//         } 
-//     }
-//     return {
-//         getTop : function(){return blogTop;},
-//         getNum : function(){return num;}
-//     };
-// }
+var toggleBlog = function(){
+    // var localhref = window.location.href;
+    var localhref = 'localhost://blog/2012/1/1/markdown_help_0/index.html'
+    var blogList = $(".menu-li");
+    var blogTop , num;
+    for (var i = 0; i < blogList.length; i++) {
+        if (localhref.toLowerCase().indexOf(totalList.eq(i).children('a').attr('href').toLowerCase())>= 0) {
+            blogTop = totalList.eq(i).offset();
+            num = i;
+            break;
+        } 
+    }
+    return {
+        getTop : function(){return blogTop.top;},
+        getNum : function(){return num;}
+    };
+}
+
+var rightTop = parseInt($('.right-menu').offset().top);
+ $(document).scroll(function (e) {
+    var pos = document.body.scrollTop;
+    if(pos >= rightTop){
+        $('.right-menu').addClass('fixed');
+    }else{
+        $('.right-menu').removeClass('fixed');
+    }
+ });
 $("#toggle").click(
         function(event) {
             event.preventDefault();
-            // if($('.search').val() == ''){
-            //     $('.ul-div').scrollTop(toggleBlog().getTop());
-            // }
+            if($('.search').val() == ''){
+                $('.ul-div').scrollTop(toggleBlog().getTop());
+                $('.menu-li').eq(toggleBlog().getNum()).addClass('active');
+            }
                 $(this).find(".top").toggleClass("active");
                 $(this).find(".middle").toggleClass("active");
                 $(this).find(".bottom").toggleClass("active");
@@ -150,6 +192,7 @@ $("#toggle").click(
                 $('.right-menu-ul li ul li').removeClass('active');
                 if ($(num).hasClass("sub")) {
                     $(num).parent().parent().addClass("active");
+                    $(num).parent().parent().siblings("a").addClass('active');
                 }
                 $(num).addClass("active");
                 $(num).siblings("ul").addClass("active");

@@ -66,33 +66,38 @@ header{
 }
 
 .right-menu{
-	position: fixed;
+	position: absolute;
+}
+.right-menu.fixed{
+  position: fixed;
+  top: 0;
 }
 .right-menu.active{
   display: none;
 }
 .right-menu nav ul li a{
 	display: block;
-  padding: 4px 20px;
+padding: 4px 20px;
   font-size: 13px;
   font-weight: 500;
   color: #767676;
-
+}
+.right-menu nav ul li ul li a{
+  padding-left: 40px;
 }
 .right-menu nav ul li ul{
-  padding: 4px 20px;
   font-size: 10px;
   font-weight: 500;
   color: #767676;
   display: none;
 }
 .right-menu nav ul li a.active{
-    background-color: #eee;
+    border-left: solid 2px blue;
 }
 
 .right-menu nav ul li ul.active{
     display: block;
 }
 .right-menu nav ul li ul li.active{
-    background-color: #eee;
+    border-left: solid 2px blue;
 }

@@ -222,6 +222,9 @@ opacity: 0.8;
         margin-left: 10%;
     border-bottom: solid 1px #000000 ;
 }
+.overlay nav ul li.active{
+background-color: green;
+}
 .overlay nav ul li:last-child
 { 
 border-bottom: none;
@@ -308,7 +311,9 @@ border-bottom: none;
     width: 35%;
     font-size: 150%;
 }
-
+.right-menu .fixed{
+	display: fixed;
+}
 
 
 @media screen and (max-width: 992px) {
