@@ -114,6 +114,14 @@ var jsonData = [{
     });
 })(jsonData);
 
+(function(){
+    var a = /\b.*(iphone|ipad|android).*\b/;
+    if(!(a.test(navigator.userAgent.toLowerCase()))){
+        
+    }
+}());
+
+
 var toggleBlog = function(){
     // var localhref = window.location.href;
     var localhref = 'localhost://blog/2012/1/1/markdown_help_0/index.html'
